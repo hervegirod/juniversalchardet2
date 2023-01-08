@@ -83,7 +83,7 @@
    <!-- zip javadoc -->
    <target depends="version, -post-init" name="-zipjavadoc">
       <zip compress="true" defaultexcludes="true" zipfile="${dist.dir}/${archiveName}-javadoc-${version}.zip">
-         <fileset description="javadoc" dir="wiki/wiki">
+         <fileset description="javadoc" dir="${dist.javadoc.dir}">
             <include name="**/*.*"/>
          </fileset>
       </zip>
